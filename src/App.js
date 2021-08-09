@@ -1,7 +1,8 @@
 
+
 import './App.css';
 import React , {Component} from 'react'
-
+import photo1 from "./photo1.jpg"
 
 class App extends Component {
  constructor(props){
@@ -12,9 +13,9 @@ class App extends Component {
            { fullName:'Kochbati Rabiaa',
              bio:'A master degree in analytical chemistry from the University of Tunis: Faculty of Sciences of Tunis.A wife and a mother of a beautiful twin',
              profession:'chemistry teacher',
-             imgSrc: require ("../src/photo1.jpg")
-            }
-          ]
+             imgSrc: photo1
+        }]
+          
             ,
     isVisible : false,
     interval: null ,
@@ -26,17 +27,23 @@ componentDidMount () {
  this.setState({
   interval: setInterval(() => {
     this.setState ({timer : this.state.timer +1})
+
   }, 1000)
 })
+
 }
 
-
+toggleVisibility=()=> {
+  this.setState({
+    isVisible: !this.state.isVisible
+  })
+ }
 componentDidUpdate(){
   console.log("componentDidUpdate()")
   if(!this.state.isVisible)
   
   {
-    this.state.timer=0
+    this.setState.timer=0
   }
 }
 
@@ -46,11 +53,7 @@ componentWillUnmount(){
  clearInterval(this.state.interval)}
 }
 
-toggleVisibility=()=> {
-  this.setState({
-    isVisible: !this.state.isVisible
-  })
- }
+
 
 
  render(){  
@@ -65,18 +68,19 @@ toggleVisibility=()=> {
          {this.state.person.map((person, index) => {
           return (
             
-              <div key={index}>
-                  <p>Full Name:{person.fullName}</p>
-                  <p>Bio:{person.bio}</p>
-                  <p>Profession:{person.profession}</p>
-                  <img src ={person.imgSrc} alt="" />
+              <div  key={index}>
+                 <img className ='img 'src ={person.imgSrc} alt="" />
+                <div className='key'>  <p className='text'><div className='person'>Full Name:</div>{person.fullName}</p>
+                  <p className='text'><div className='person'>Bio:</div>{person.bio}</p>
+                  <p className='text'><div className='person'>Profession:</div>{person.profession}</p></div>
+                 
               </div>
           )})
            
       }
       
-     <h4>{this.state.timer}</h4>
-      </div>) :(<h4>Clic on the button to show the profile</h4>)
+     <h4 className='timer'>{this.state.timer}</h4>
+      </div>) :(<h4 className='clic '>Clic on the button to show the profile</h4>)
       
       }                                                        
      
