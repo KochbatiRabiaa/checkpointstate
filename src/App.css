@@ -1,0 +1,60 @@
+*{
+    background-color: rgb(112, 133, 132);
+    
+}
+
+.person {
+    font-size: 50px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.856);
+
+}
+.btn {
+    
+        background-color: #0f5d90; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin: 0 40% ;
+      
+}
+.text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.img{
+    width: 50%;
+border-radius: 50%;
+display: flex;
+float: right ;
+padding: 1px 0 0 0;
+}
+.key {
+    padding: 100px 0 0 0;
+    
+    
+    width: 50%;
+}
+.timer {
+    border-radius: 20px;
+    border-style: solid;
+    width: 8%;
+    height: 10%;
+    float: center;
+    size: 20px;
+    margin: 50px 0 0 50px;
+    font-size: 50px;
+}
+.clic {
+    font-size: 50px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.856);
+    margin:  20PX 15%;
+    
+}
